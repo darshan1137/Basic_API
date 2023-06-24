@@ -21,7 +21,9 @@ class Test(db.Model):
 
 @app.route('/')
 def home():
-    return "<h1>Hello! Welcome to my Web App</h2>"
+    return "<h1>Hello! Welcome to my Web App</h2>" \
+           "<p> Check '/test' for the endpoint to read the Word from DB </p>" \
+           "<p>Go to '/change?text=example' for changing the Word</p>"
 
 
 @app.route("/test")
